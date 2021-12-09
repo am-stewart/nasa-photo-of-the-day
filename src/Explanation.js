@@ -5,6 +5,7 @@ const ExplanationStyled = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 3%;
+    background: ${props => props.theme.nasaLightRed};
 
    p{
     width: 52%;
