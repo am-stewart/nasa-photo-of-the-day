@@ -4,10 +4,14 @@ import axios from 'axios'
 import { BASE_URL, API_KEY } from './constants/constants'
 
 /////IMPORT WHATEVER OTHER COMPONENTS I ADD
-
+import Title from './Title'
+import Date from './Date'
+import Copyright from './Copyright'
+import Image from './Image'
+import Explanation from './Explanation'
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
 
   useEffect( () => {
     const fetchData = () => {
@@ -26,10 +30,12 @@ function App() {
   return (
     <div className="App">
       <h1> NASA Photo of the Day! </h1>
-      <h2>title of photo - taken from data</h2>
+      < Title data={data} />
+      <Date data={data} />
+      {/* <h2> Title key={data.title} </h2> */}
       <h3>date of photo - taken from data</h3>
       <p>copyright - taken from data</p>
-      {/*put the image here? in a div??*/}
+      <p>image goes here some how</p>
       <p>explanation of photo - taken from data</p>
       {/* <p>
         Read through the instructions in the README.md file to build your NASA
