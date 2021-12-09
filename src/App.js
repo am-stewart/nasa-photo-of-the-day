@@ -31,16 +31,10 @@ function App() {
     <div className="App">
       <h1> NASA Photo of the Day! </h1>
       < Title data={data} />
-      <Date data={data} />
-      {/* <h2> Title key={data.title} </h2> */}
-      <h3>date of photo - taken from data</h3>
-      <p>copyright - taken from data</p>
-      <p>image goes here some how</p>
-      <p>explanation of photo - taken from data</p>
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p> */}
+      < Date data={data} />
+      < Copyright data={data} />
+      < Image data={data} />
+      < Explanation data={data} />
     </div>
   );
 }
